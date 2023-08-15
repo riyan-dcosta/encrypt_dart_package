@@ -1,3 +1,5 @@
+import 'package:encrypt_dart_package/src/encrypt_secret/encrypt_base.dart';
+
 abstract class ISecretBase {
   String encryptMessage({required String message});
   String decryptMessage({required String message});
@@ -6,13 +8,11 @@ abstract class ISecretBase {
 class SecretBase extends ISecretBase {
   @override
   String decryptMessage({required String message}) {
-    // TODO: implement decryptMessage
-    throw UnimplementedError();
+    return EncryptBase().decryptMessage(message: message);
   }
 
   @override
   String encryptMessage({required String message}) {
-    // TODO: implement encryptMessage
-    throw UnimplementedError();
+    return EncryptBase().encryptMessage(message: message);
   }
 }
