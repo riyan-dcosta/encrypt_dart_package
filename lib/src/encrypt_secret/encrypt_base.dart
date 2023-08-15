@@ -6,10 +6,8 @@ abstract class IEncryptBase {
 }
 
 class EncryptBase extends IEncryptBase {
-  late final String privateKey;
-  EncryptBase() {
-    privateKey = '1234567890123456789012';
-  }
+  final String privateKey = "12345678901234567890123456789012";
+
   @override
   String decryptMessage({required String message}) {
     final key = Key.fromUtf8(privateKey);
